@@ -81,11 +81,11 @@ public class Practice5 {
 			String name = "Hama";
 			int age = 31;
 			double height = 171.1;
-			char zodiac = '猿';
+			
 			System.out.println(name);
 			System.out.println(age);
 			System.out.println(height);
-			System.out.println(zodiac);
+		
 		}
 		
 		//5-2
