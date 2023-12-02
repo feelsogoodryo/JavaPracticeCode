@@ -1,4 +1,4 @@
-package regularExpression;
+package stringPractice;
 
 public class RegularExpressionSummary {
 
