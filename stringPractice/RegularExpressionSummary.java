@@ -29,7 +29,7 @@ public class RegularExpressionSummary {
 		System.out.println("ABCDEFG".matches("[A-Z]{7}"));//true
 		System.out.println("");
 		System.out.println("[A-Z][A-Z0-9]{7} check");
-		//初めの一文字がA~Z、二文字目からA~Zか数字のいずれか、トータル八文字
+		//初めの一文字がA~Z、二文字目からA~Zか数字のいずれか、トータル8文字
 		System.out.println("A1234567".matches("[A-Z][A-Z0-9]{7}"));//true
 		System.out.println("");
 		System.out.println("A{1}B{2,}C{3,5}D?E+ check");
@@ -43,11 +43,13 @@ public class RegularExpressionSummary {
 		System.out.println("URL".matches("UR[LIN]"));//true
 		System.out.println("");
 		System.out.println("\\d check");
-		//いずれかの数字[0-9]と同じ
+		
+		//★いずれかの数字[0-9]と同じ
 		System.out.println("1".matches("\\d"));//true
 		System.out.println("");
 		System.out.println("\\w check");
-		//英字・数字・アンダーバー[a-zA-Z_0-9]と同じ。+アスタリスク
+		
+		//★英字・数字・アンダーバー[a-zA-Z_0-9]と同じ。+アスタリスク
 		System.out.println("aA_9".matches("\\w*"));
 		System.out.println("");
 		System.out.println("\\s check");
@@ -55,6 +57,7 @@ public class RegularExpressionSummary {
 		System.out.println(" ".matches("\\s"));
 		System.out.println("");
 		System.out.println("splitMethod check");
+		
 		//splitMethodの利用
 		String a ="abc,def:ghi";
 		String[] words = a.split("[,:]");

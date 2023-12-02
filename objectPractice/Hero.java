@@ -5,6 +5,9 @@ public class Hero extends Character {
 	public int hp;
 	public int maxHp;
 	public Sword sword;
+	public int gold;
+	final String MYJOB = "Hero";
+	
 	
 	public Hero(String name, int hp, Sword sword) {
 		this.name = name;
@@ -15,12 +18,27 @@ public class Hero extends Character {
 	public Hero(String name, int hp) {
 		this.name = name;
 		this.hp = hp;
+		this.setGold(1000);
 		System.out.println("constructor start2");
 	}
 	public Hero(String name){
 		//Call another constructor
 		this(name,100);
 		System.out.println("constructor start1");
+	}
+	public String getName() {
+		return this.name;
+	}
+	public int getGold() {
+		return this.gold;
+	}
+	public void setGold(int gold) {
+		if(gold > 0) {
+			this.gold = gold;	
+		}
+	}
+	public String getJob() {
+		return this.MYJOB;
 	}
 	// Check status
 	public void status() {
