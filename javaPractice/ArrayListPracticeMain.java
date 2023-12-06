@@ -1,6 +1,7 @@
 package javaPractice;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -76,6 +77,14 @@ public class ArrayListPracticeMain {
 	    list.add(h);
 	    h.name = "スガワラ";
 	    System.out.println("BeforName:" + list.get(0).name);
+	    
+		//配列の正しい等価判定
+		//二次元以上の配列同士の等価判定にはArray.deepEquals()を用いる事
+	    //基本データ（プリミティブ型）は等値比較（==）、参照型（クラス型）は等価比較を使う
+		int[] a = {1, 2, 3, 4, 5};
+		int[] b = {1, 2, 3, 4, 5};
+		System.out.println("誤った判定：" + a.equals(b));
+		System.out.println("正しい判定：" + Arrays.equals(a, b));
 
 	}
 		public static void printList(List<String> list) {
@@ -87,6 +96,8 @@ public class ArrayListPracticeMain {
 		public static void printList2(ArrayList<String> list) {
 			for(String s : list) {
 				System.out.println(s);
-			}
 		}
+
+	}	
+			
 }
