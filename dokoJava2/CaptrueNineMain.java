@@ -28,21 +28,60 @@ public class CaptrueNineMain {
 	          メインのDB操作処理（後述します）
 			 ****************************** */
 			// STEP 2: 送信処理
+			// ********** コード9-2 ここから **********
+			// STEP 2-(1)-1 送信すべきSQL文のひな形を準備
+//			PreparedStatement pstmt = con.prepareStatement
+//					("DELETE FROM TEST WHERE ID <= ? OR NAME = ?");
+//			// STEP 2-(1)-2 ひな形に値を流し込みSQL文を組み立てる
+//			pstmt.setInt(1, 10);            // １番目の？に4を流し込む
+//			pstmt.setString(2, "ASAHI");    // ２番目の？にASAHIを流し込む
+//			// STEP 2-(1)-3 組み立て終えたSQL文をDBMSに送信する
+//			int r = pstmt.executeUpdate();
+			
+//			PreparedStatement pstmt = con.prepareStatement
+//			("DELETE FROM TEST WHERE NAME = ?");
+//			// STEP 2-(1)-2 ひな形に値を流し込みSQL文を組み立てる
+//			pstmt.setString(1, "すずめ");            // １番目の？にすずめを流し込む
+//			// STEP 2-(1)-3 組み立て終えたSQL文をDBMSに送信する
+//			int r = pstmt.executeUpdate();			
+//			// STEP 2-(1)-4 処理結果を判定する
+//			if (r != 0) {
+//				System.out.println(r + "件の名前を削除しました");
+//			} else {
+//				System.out.println("該当する名前はありませんでした");
+//			}
+//			pstmt.close();                  // 後片付け
+//			// ********** コード9-2 ここまで **********
+			
 			// ********** コード9-3 ここから **********
 			// STEP 2-(2)-1 送信すべきSQL文のひな形を準備
-			PreparedStatement pstmt = con.prepareStatement
-					("SELECT * FROM Test WHERE ID >= ?");
-			// STEP 2-(2)-2 ひな形に値を流し込みSQL文を組み立てる
-			pstmt.setInt(1, 2);             // １番目の？に2を流し込む
-			// STEP 2-(2)-3 組み立て終えたSQL文をDBMSに送信する
-			ResultSet rs = pstmt.executeQuery();
+//			PreparedStatement pstmt = con.prepareStatement
+//					("SELECT * FROM TEST WHERE NAME = ?");
+//			// STEP 2-(2)-2 ひな形に値を流し込みSQL文を組み立てる
+//			pstmt.setString(1, "A");             // １番目の？に1を流し込む
+//			// STEP 2-(2)-3 組み立て終えたSQL文をDBMSに送信する
+//			ResultSet rs = pstmt.executeQuery();
+//			while(rs.next()) {
+//				System.out.print(rs.getInt("ID"));
+//				System.out.print(rs.getString("NAME"));
+//				System.out.println("");
+//			}
+			
+			con.setAutoCommit(false);
+			// STEP 2: SQL送信処理
+			/* *****メインのDB操作処理***** */		
+			String SQL = "INSERT INTO TEST(ID, NAME) VALUES( ?, ?)";
+			PreparedStatement pstmt = con.prepareStatement(SQL);
+			pstmt.setInt(1, 3);
+			pstmt.setString(2, "da");
+			pstmt.executeUpdate();
 			// STEP 2-(2)-4 結果表を処理する
 			/* *************************************
 		          結果表の処理（記述する内容は、後述します）
 			 ************************************* */
-			rs.close();
 			pstmt.close();                  // 後片付け
 			// ********** コード9-3 ここまで **********
+
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
