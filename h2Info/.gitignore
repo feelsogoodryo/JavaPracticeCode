@@ -5,3 +5,9 @@
 /H2jdbcRecordDemo.class
 /H2jdbcUpdateDemo.class
 /H2jdbcDeleteDemo.class
+/ProducDAO.class
+/Product.class
+/ProductDAO.class
+/DBConnectionTester.class
+/SampleSelect.class
+/TesterDto.class
