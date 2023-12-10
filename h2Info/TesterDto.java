@@ -1,6 +1,7 @@
 package h2Info;
 
 public class TesterDto {
+	//private field and method.
 	private String id;
 	private String name;
 	private String age;
