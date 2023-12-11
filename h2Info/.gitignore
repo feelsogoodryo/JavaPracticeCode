@@ -11,3 +11,7 @@
 /DBConnectionTester.class
 /SampleSelect.class
 /TesterDto.class
+/SampleInsert.class
+/SampleUpdate.class
+/SampleDelete.class
+/SampleSelectRelease.class
