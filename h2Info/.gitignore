@@ -15,3 +15,9 @@
 /SampleUpdate.class
 /SampleDelete.class
 /SampleSelectRelease.class
+/SampleNotTransaction.class
+/H2dbQuery.class
+/SampleTransaction.class
+/SamplePrepared.class
+/SampleDAO1.class
+/InsertProgram1.class

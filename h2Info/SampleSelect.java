@@ -27,7 +27,7 @@ public class SampleSelect {
  			ResultSet rs = smt.executeQuery(sql);
  
  			//全てのデータを表示
- 			
+ 			//プレースホルダでフォーマットも整える。
  			ArrayList<TesterDto> nameDto = new ArrayList<TesterDto>();
  			while(rs.next()) {
  				//instanceを回す分だけ生成する。
