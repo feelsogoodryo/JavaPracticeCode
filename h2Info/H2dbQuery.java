@@ -16,7 +16,11 @@ public class H2dbQuery {
   select * from bookinfo
  * 
  * 
+ * 以下URLで使用したテーブル
+ * https://penguinlabo.hatenablog.com/entry/spring/web-layered
  * 
+ * DROP TABLE IF EXISTS profile;
+ * create table profile(Name VARCHAR(255), Birthday DATE, age INT);
  * 
  * 
  * 
